@@ -1,0 +1,71 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "cad70d95-0831-407b-9203-c527e022ede0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "original data: [5, 8, None, 7, 10, None, 6]\n",
+      "imputed data: [7.2, 7.2, 7.2, 7.2, 7.2, 6]\n",
+      "mean: 7.2\n"
+     ]
+    }
+   ],
+   "source": [
+    "data=[5,8,None,7,10,None,6]\n",
+    "z=0\n",
+    "count=0\n",
+    "for x in data:\n",
+    "    if x is not None:\n",
+    "        z+=x\n",
+    "        count+=1\n",
+    "mean_val=z/count\n",
+    "imputed=[]\n",
+    "for x in data:\n",
+    "   if x is not None:\n",
+    "     imputed.append(mean_val)\n",
+    "else:\n",
+    "    imputed.append(x)\n",
+    "print(\"original data:\", data)\n",
+    "print(\"imputed data:\", imputed)\n",
+    "print(\"mean:\", mean_val)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e01ea4ec-6743-424a-97c4-b6922fb9802b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    " "
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
